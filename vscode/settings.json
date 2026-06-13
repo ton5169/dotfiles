@@ -1,0 +1,292 @@
+{
+  // ====== ШРИФТЫ И ОТОБРАЖЕНИЕ ======
+  // "editor.fontFamily": "'mononoki', 'Zed Mono', 'Cascadia Code', 'JetBrains Mono', 'Courier New', monospace",
+  "editor.fontFamily": "Lilex, Consolas, monospace",
+  "editor.fontSize": 20,
+  "editor.fontWeight": "400",
+  "editor.fontLigatures": false,
+  "editor.lineHeight": 0, // авто-высота по размеру шрифта
+  "editor.letterSpacing": 0.2,
+
+  // Постоянное отображение кода по центру
+  "workbench.editor.centeredLayoutAutoResize": true,
+  "workbench.editor.centeredLayoutFixedWidth": true,
+
+  // "terminal.integrated.fontFamily": "'mononoki', 'Zed Mono', 'Cascadia Code', 'JetBrains Mono', 'Courier New', monospace",
+  "terminal.integrated.fontFamily": "Lilex, Consolas, monospace",
+  "terminal.integrated.fontSize": 18,
+  "terminal.integrated.cursorBlinking": true,
+
+  //======= ТЕМА ========
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": [
+          "constant.other.caps.python",
+          "entity.name.constant",
+          "variable.other.constant",
+          "variable.other.enummember",
+        ],
+        "settings": { "foreground": "#4388e2" },
+      },
+    ],
+  },
+
+  // Консистентные размеры шрифтов
+  "debug.console.fontSize": 16,
+  "chat.editor.fontSize": 16,
+  "markdown.preview.fontSize": 16,
+
+  // ====== РЕДАКТОР ======
+  "editor.wordWrap": "on",
+  "editor.cursorStyle": "line",
+  "editor.cursorWidth": 2,
+  "editor.cursorBlinking": "smooth",
+  "editor.snippetSuggestions": "top",
+  "editor.suggestSelection": "first",
+  "editor.glyphMargin": true,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.guides.bracketPairs": "active",
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairsHorizontal": "active",
+
+  // Форматирование
+  "editor.formatOnSave": true,
+  "editor.formatOnSaveMode": "modificationsIfAvailable",
+  "editor.formatOnPaste": false, // во избежание сюрпризов при вставке
+  "editor.formatOnType": false,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit",
+    "source.organizeImports": "explicit",
+  },
+  "prettier.useEditorConfig": true,
+
+  // ====== ФАЙЛЫ ======
+  "files.autoSave": "onFocusChange",
+  "files.trimTrailingWhitespace": true,
+  "files.trimFinalNewlines": true,
+  "files.insertFinalNewline": true,
+  "files.exclude": {
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true,
+    "**/node_modules": true,
+    "**/.git": false,
+    "**/__pycache__": true,
+    "**/*.pyc": true,
+  },
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/dist": true,
+    "**/build": true,
+    "**/.venv": true,
+    "**/.pytest_cache": true,
+  },
+
+  // ====== PYTHON ======
+  "[python]": {
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "explicit",
+      "source.organizeImports": "explicit",
+    },
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.rulers": [88, 120],
+    // "editor.insertSpaces": false,
+    // "editor.tabSize": 4,
+    // "editor.detectIndentation": false
+  },
+  "python.analysis.typeCheckingMode": "basic",
+  "python.terminal.useEnvFile": true,
+  "ruff.enable": true,
+  "ruff.lint.enable": true,
+  "ruff.format.enable": true,
+  "ruff.organizeImports": true,
+
+  // ====== ТЕРМИНАЛ ======
+  "terminal.integrated.profiles.windows": {
+    "PowerShell": {
+      "path": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+    },
+    "Command Prompt": {
+      "path": "C:\\Windows\\System32\\cmd.exe",
+    },
+  },
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+  "terminal.integrated.profiles.osx": {
+    "zsh": { "path": "/bin/zsh" },
+  },
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "terminal.integrated.scrollback": 10000,
+  "workbench.editor.enablePreview": true, // аккуратнее с вкладками
+  "workbench.editor.decorations.badges": false,
+  "workbench.editor.empty.hint": "hidden",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.editorAssociations": { "*.ipynb": "jupyter-notebook" },
+
+  // ====== EXPLORER ======
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmDelete": false,
+  "explorer.compactFolders": false,
+
+  // ====== GIT ======
+  "git.enableSmartCommit": true,
+  "git.confirmSync": false,
+  "git.autofetch": true,
+  "git.openRepositoryInParentFolders": "always",
+
+  // ====== JUPYTER ======
+  "jupyter.alwaysTrustNotebooks": true,
+  "jupyter.askForKernelRestart": false,
+
+  // ====== РАСШИРЕНИЯ ======
+  "liveServer.settings.donotShowInfoMsg": true,
+  "continue.showInlineTip": false,
+
+  // ====== БЕЗОПАСНОСТЬ И ПРОИЗВОДИТЕЛЬНОСТЬ ======
+  "http.systemCertificates": false,
+  "security.workspace.trust.untrustedFiles": "prompt", // безопаснее, чем "open"
+  "extensions.ignoreRecommendations": false,
+  "telemetry.telemetryLevel": "off",
+
+  // ====== DIFF EDITOR ======
+  "diffEditor.wordWrap": "on",
+  "diffEditor.ignoreTrimWhitespace": false,
+
+  // ====== UNICODE И ДОСТУПНОСТЬ ======
+  "editor.unicodeHighlight.allowedCharacters": {
+    "у": true,
+    "а": true,
+    "е": true,
+    "о": true,
+    "р": true,
+    "с": true,
+    "х": true,
+  },
+  "editor.unicodeHighlight.ambiguousCharacters": false,
+  "editor.unicodeHighlight.nonBasicASCII": false,
+  "editor.accessibilitySupport": "off",
+
+  // ====== ДОПОЛНИТЕЛЬНЫЕ ЯЗЫКИ ======
+  "css.enabledLanguages": ["html"],
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "typescript": "typescriptreact",
+  },
+  "[javascript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[typescript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[json]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[html]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[css]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+
+  // ====== INTELLISENSE ======
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": false,
+    "strings": true,
+  },
+  "editor.acceptSuggestionOnCommitCharacter": true,
+  "editor.acceptSuggestionOnEnter": "on",
+
+  // ====== MINIMAP ======
+  "editor.minimap.enabled": true,
+  "editor.minimap.scale": 1,
+  "editor.minimap.showSlider": "mouseover",
+
+  // ====== BREADCRUMBS ======
+  "breadcrumbs.enabled": true,
+  "breadcrumbs.showFiles": true,
+  "breadcrumbs.showSymbols": true,
+  "workbench.startupEditor": "none",
+  "github.copilot.enable": {
+    "*": false,
+    "plaintext": false,
+    "markdown": true,
+    "scminput": false,
+    "python": true,
+    "dockerfile": true,
+    "go": false,
+    "sql": true,
+    "json": true,
+    "rust": false,
+  },
+  "continue.enableTabAutocomplete": false,
+  "terminal.integrated.allowedLinkSchemes": [
+    "file",
+    "http",
+    "https",
+    "mailto",
+    "vscode",
+    "vscode-insiders",
+    "docker-desktop",
+  ],
+  // ====== Gopls (язык-сервер Go) ======
+  "gopls": {
+    // Вставлять плейсхолдеры в автодополнении:
+    // myFunc(<arg1>, <arg2>)
+    "formatting.gofumpt": false,
+    "usePlaceholders": true,
+
+    "staticcheck": true,
+    "analyses": {
+      "unusedparams": true,
+      "shadow": true,
+      "nilness": true,
+      "unusedwrite": true,
+    },
+    "directoryFilters": [
+      "-node_modules",
+      "-.git",
+      "-.idea",
+      "-.vscode",
+      "-dist",
+      "-build",
+    ],
+    "ui.semanticTokens": true,
+    "completeUnimported": true,
+    "matcher": "Fuzzy",
+  },
+  // ====== GO: ФОРМАТ, ЛИНТЕРЫ, ТЕСТЫ ======
+  // Управление установкой go-tools (gofumpt, golangci-lint и т.д.)
+  "go.toolsManagement.autoUpdate": true,
+
+  // Форматирование: gofumpt даёт чуть более строгий стиль поверх gofmt
+  // (если хочешь максимально стандартно — поставь "gofmt")
+  "go.formatTool": "gofumpt",
+  "go.formatFlags": [],
+
+  //  - "staticcheck" для простоты
+  //  - "golangci-lint" если хочешь сразу много линтеров
+  "go.lintTool": "golangci-lint",
+  "go.lintOnSave": "package", // гоняем линтер по текущему пакету
+  "go.lintFlags": [], // сюда можно добавить свои флаги позже
+
+  // Сборка / vet / тесты при сохранении
+  "go.buildOnSave": "package", // можно "workspace", если проект небольшой
+  "go.vetOnSave": "package",
+
+  "go.testFlags": [
+    "-v",
+    // "-race" // можно включить, но будет ощутимо медленнее
+  ],
+  "go.testTimeout": "60s",
+  "[go]": {
+    "editor.defaultFormatter": "golang.go",
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "file",
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit",
+    },
+  },
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "workbench.activityBar.location": "top",
+  "workbench.sideBar.location": "right",
+  "window.commandCenter": false,
+  "window.menuBarVisibility": "compact",
+  "workbench.colorTheme": "Minimal Kiwi",
+  "chat.viewSessions.orientation": "stacked",
+  "claudeCode.preferredLocation": "panel",
+  "chat.disableAIFeatures": true,
+}
