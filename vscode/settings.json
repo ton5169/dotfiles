@@ -1,8 +1,8 @@
 {
   // ====== ШРИФТЫ И ОТОБРАЖЕНИЕ ======
   // "editor.fontFamily": "'mononoki', 'Zed Mono', 'Cascadia Code', 'JetBrains Mono', 'Courier New', monospace",
-  "editor.fontFamily": "Lilex, Consolas, monospace",
-  "editor.fontSize": 20,
+  "editor.fontFamily": "JetBrainsMono Nerd Font, Lilex, Consolas, monospace",
+  "editor.fontSize": 20, 
   "editor.fontWeight": "400",
   "editor.fontLigatures": false,
   "editor.lineHeight": 0, // авто-высота по размеру шрифта
@@ -13,7 +13,7 @@
   "workbench.editor.centeredLayoutFixedWidth": true,
 
   // "terminal.integrated.fontFamily": "'mononoki', 'Zed Mono', 'Cascadia Code', 'JetBrains Mono', 'Courier New', monospace",
-  "terminal.integrated.fontFamily": "Lilex, Consolas, monospace",
+  "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font, Lilex, Consolas, monospace",
   "terminal.integrated.fontSize": 18,
   "terminal.integrated.cursorBlinking": true,
 

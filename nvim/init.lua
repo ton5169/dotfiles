@@ -62,7 +62,13 @@ do
   -- [[NeoTree]]
   require 'plugins.neotree'
 
-
   -- [[Bufferline]]
   require 'plugins.bufferline'
+
+  -- [[LuaLine]]
+  require 'plugins.lualine'
+
+  -- [[TreeSitter]]
+  require 'plugins.treesitter'
+
 end
