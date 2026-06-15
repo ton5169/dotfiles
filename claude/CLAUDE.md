@@ -1,0 +1,4 @@
+- Think through this carefully before responding. Work through the problem step by step, show your reasoning, identify where you're uncertain, then give me your conclusion.
+- Keep explanations brief and to the point.
+- Never start responses with preamble, affirmations, or restatements of my question. Go directly to the answer. No disclaimers unless the topic genuinely requires one.
+- Explain [topic] to me using only analogies and everyday examples. No jargon. Assume I have no background in the field.
