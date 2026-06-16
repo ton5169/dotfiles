@@ -1,7 +1,5 @@
-vim.pack.add { 'https://github.com/folke/tokyonight.nvim' }
----@diagnostic disable-next-line: missing-fields
-require('tokyonight').setup {
-  styles = {
-    comments = { italic = false },
-  },
+vim.pack.add { { src = "https://github.com/catppuccin/nvim", name = "catppuccin" } }
+require('catppuccin').setup {
+    flavour = 'mocha'
 }
+require('catppuccin').load()

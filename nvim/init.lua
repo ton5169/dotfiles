@@ -58,13 +58,15 @@ do
 	})
 end
 
+-- remove deprication warning
+vim.deprecate = function() end
+
 -- ============================================================
 -- PLUGINS
 -- ============================================================
 do
 	-- [[Colorscheme]]
 	require("plugins.colortheme")
-	vim.cmd.colorscheme("tokyonight-night")
 
 	-- [[NeoTree]]
 	require("plugins.neotree")
@@ -92,4 +94,16 @@ do
 
 	-- [[ Autoformatting ]]
 	require("plugins.autoformatting")
+
+	-- [[ GitSigns ]]
+	require("plugins.gitsigns")
+
+	-- [[ Alpha ]]
+	require("plugins.alpha")
+
+	-- [[ IndentBlankline ]]
+	require("plugins.indent-blankline")
+
+	-- [[ Misc plugins ]]
+	require("plugins.misc")
 end

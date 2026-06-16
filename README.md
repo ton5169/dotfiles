@@ -227,6 +227,8 @@ Git status source (`git_status.window.mappings`):
 
 These plugins are configured in this repo but do not define keymaps in config:
 
+Some of them may still provide *plugin default* mappings (documented below).
+
 | Plugin | Notes |
 | --- | --- |
 | `bufferline.nvim` | Mouse only: left = select buffer, right/middle = close |
@@ -238,3 +240,27 @@ These plugins are configured in this repo but do not define keymaps in config:
 | `LuaSnip` | Snippets engine; no custom keymaps (see blink.cmp for completion keys) |
 | `plenary.nvim`, `nui.nvim`, `nvim-web-devicons`, `image.nvim`, `nvim-window-picker` | Dependencies for Neo-tree / Telescope |
 | `vim-bbye` | Used by bufferline close command |
+| `alpha-nvim` | Start screen only |
+| `gitsigns.nvim` | Git signs only (no custom mappings) |
+| `indent-blankline.nvim` (`ibl`) | Indent guides only |
+| `vim-sleuth` | Auto-detect indentation settings |
+| `nvim-autopairs` | Auto-insert matching pairs |
+| `vim-fugitive` / `vim-rhubarb` | Git commands; no custom mappings |
+| `vim-tmux-navigator` | Provides default `<C-h/j/k/l>` mappings (see below) |
+| `todo-comments.nvim` | Provides default `[t` / `]t` mappings (see below) |
+| `nvim-colorizer.lua` | Highlight color codes |
+| `Comment.nvim` | Provides default `gc*` / `gb*` mappings (see below) |
+
+### Plugin default keymaps (from upstream defaults)
+
+These mappings are not explicitly set in this repo, but are enabled by plugin defaults (when the plugin is loaded).
+If a plugin default mapping overlaps a core mapping (e.g. `vim-tmux-navigator` vs core `<C-h/j/k/l>`), whichever is applied last will win.
+
+| Plugin | Key | Mode | Action |
+| --- | --- | --- | --- |
+| `Comment.nvim` | `gcc` | n | Toggle comment for current line |
+| `Comment.nvim` | `gc{motion}` | n | Toggle comment for a motion |
+| `Comment.nvim` | `gbc` | n | Toggle block comment for current line |
+| `Comment.nvim` | `gb{motion}` | n | Toggle block comment for a motion |
+| `todo-comments.nvim` | `]t` / `[t` | n | Next / previous TODO comment |
+| `vim-tmux-navigator` | `<C-h>` / `<C-j>` / `<C-k>` / `<C-l>` | n | Navigate splits (and across tmux panes) |

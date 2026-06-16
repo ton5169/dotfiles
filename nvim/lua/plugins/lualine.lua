@@ -4,23 +4,23 @@ vim.pack.add({
     'https://github.com/nvim-lualine/lualine.nvim'
  })
 
--- Adapted from: https://github.com/nvim-lualine/lualine.nvim/blob/master/lua/lualine/themes/onedark.lua
+-- Catppuccin Mocha palette: https://github.com/catppuccin/catppuccin
 local colors = {
-  blue = '#61afef',
-  green = '#98c379',
-  purple = '#c678dd',
-  cyan = '#56b6c2',
-  red1 = '#e06c75',
-  red2 = '#be5046',
-  yellow = '#e5c07b',
-  fg = '#abb2bf',
-  bg = '#282c34',
-  gray1 = '#828997',
-  gray2 = '#2c323c',
-  gray3 = '#3e4452',
+  blue = '#89b4fa',
+  green = '#a6e3a1',
+  purple = '#cba6f7',
+  cyan = '#94e2d5',
+  red1 = '#f38ba8',
+  red2 = '#eba0ac',
+  yellow = '#f9e2af',
+  fg = '#cdd6f4',
+  bg = '#1e1e2e',
+  gray1 = '#7f849c',
+  gray2 = '#313244',
+  gray3 = '#45475a',
 }
 
-local onedark_theme = {
+local mocha_theme = {
   normal = {
     a = { fg = colors.bg, bg = colors.green, gui = 'bold' },
     b = { fg = colors.fg, bg = colors.gray3 },
@@ -39,12 +39,13 @@ local onedark_theme = {
 }
 
 -- Import color theme based on environment variable NVIM_THEME
-local env_var_nvim_theme = os.getenv 'NVIM_THEME' or 'nord'
+local env_var_nvim_theme = os.getenv 'NVIM_THEME' or 'mocha'
 
 -- Define a table of themes
 local themes = {
-  onedark = onedark_theme,
-  nord = 'nord',
+  -- Hand-rolled mocha palette; avoids load-order issues with the named
+  -- 'catppuccin' lualine theme, which may not be on the runtimepath yet.
+  mocha = mocha_theme,
 }
 
 local hide_in_width = function()
@@ -89,7 +90,7 @@ local diff = {
 require('lualine').setup {
   options = {
     icons_enabled = true,
-    theme = themes[env_var_nvim_theme], -- Set theme based on environment variable
+    theme = themes[env_var_nvim_theme] or mocha_theme, -- Set theme based on environment variable
     section_separators = { left = '', right = '' },
     component_separators = { left = '', right = '' },
     disabled_filetypes = { 'alpha', 'neo-tree', 'Avante' },

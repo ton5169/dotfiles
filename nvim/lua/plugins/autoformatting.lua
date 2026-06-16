@@ -9,11 +9,7 @@ vim.pack.add { 'https://github.com/stevearc/conform.nvim' }
 require('conform').setup {
   formatters = {
     ruff_format = {
-      prepend_args = {
-        '--line-length', '80',
-        '--target-version', 'py313',
-        '--config', 'format.quote-style = "single"',
-      },
+      args = { 'format', '--line-length', '80', '--target-version', 'py313', '--config', 'format.quote-style = "single"', '--stdin-filename', '$FILENAME', '-' },
     },
   },
   formatters_by_ft = {
@@ -35,7 +31,7 @@ require('conform').setup {
     terraform  = { 'terraform_fmt' },
   },
   format_on_save = {
-    timeout_ms = 500,
+    timeout_ms = 2000,
     lsp_format = 'fallback', -- use LSP formatting when no formatter is configured above
   },
 }

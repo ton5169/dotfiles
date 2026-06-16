@@ -2,7 +2,7 @@
   // ====== ШРИФТЫ И ОТОБРАЖЕНИЕ ======
   // "editor.fontFamily": "'mononoki', 'Zed Mono', 'Cascadia Code', 'JetBrains Mono', 'Courier New', monospace",
   "editor.fontFamily": "JetBrainsMono Nerd Font, Lilex, Consolas, monospace",
-  "editor.fontSize": 20, 
+  "editor.fontSize": 20,
   "editor.fontWeight": "400",
   "editor.fontLigatures": false,
   "editor.lineHeight": 0, // авто-высота по размеру шрифта
@@ -285,8 +285,8 @@
   "workbench.sideBar.location": "right",
   "window.commandCenter": false,
   "window.menuBarVisibility": "compact",
-  "workbench.colorTheme": "Minimal Kiwi",
   "chat.viewSessions.orientation": "stacked",
   "claudeCode.preferredLocation": "panel",
   "chat.disableAIFeatures": true,
+  "workbench.colorTheme": "Catppuccin Mocha",
 }
