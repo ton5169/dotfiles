@@ -1,4 +1,4 @@
-$ModuleRoot = ($env:PSModulePath -split ';' | Where-Object { $_ -like "$HOME*" } | Select-Object -First 1)
+$ModuleRoot = ($env:PSModulePath -split ';' | Where-Object { $_ -like "$HOME\*" } | Select-Object -First 1)
 
 New-Item -ItemType Directory -Force -Path $ModuleRoot | Out-Null
 
@@ -6,16 +6,15 @@ git clone https://github.com/catppuccin/powershell.git "$ModuleRoot\Catppuccin"
 
 Import-Module Catppuccin
 
-
-
 New-Item -Path $PROFILE.CurrentUserAllHosts -ItemType File -Force
-notepad $PROFILE.CurrentUserAllHosts
 
+notepad $PROFILE.CurrentUserAllHosts
 
 Add this to the opened profile file:
 
+### Catppuccin PowerShell theme
 
-# Catppuccin PowerShell theme
+```
 if (Get-Module -ListAvailable Catppuccin) {
     Import-Module Catppuccin -ErrorAction Stop
 
@@ -36,7 +35,6 @@ if (Get-Module -ListAvailable Catppuccin) {
 } else {
     Write-Warning "Catppuccin module not found. Check that it is installed in a PSModulePath folder."
 }
-
-
+```
 
 . $PROFILE.CurrentUserAllHosts
