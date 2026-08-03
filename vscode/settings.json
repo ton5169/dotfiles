@@ -2,7 +2,7 @@
   "workbench.colorTheme": "Tokyo Night",
 
   "editor.fontFamily": "'JetBrainsMono Nerd Font', Consolas, monospace",
-  "editor.fontSize": 18,
+  "editor.fontSize": 16,
   "editor.wordWrap": "on",
   "editor.minimap.enabled": true,
   "editor.formatOnSave": true,
@@ -19,21 +19,31 @@
     "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
       "source.fixAll.ruff": "explicit",
-      "source.organizeImports.ruff": "explicit"
-    }
+      "source.organizeImports.ruff": "explicit",
+    },
   },
-
+  
   "[go]": {
-    "editor.defaultFormatter": "golang.go"
+    "editor.defaultFormatter": "golang.go",
   },
-
+  
   "[javascript][javascriptreact][typescript][typescriptreact][json][jsonc][html][css]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
-
+  
+  "[markdown]": {
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true,
+  },
+  
   "telemetry.telemetryLevel": "off",
   "chat.disableAIFeatures": true,
-
+  
   "containers.containerClient": "com.microsoft.visualstudio.containers.docker",
-  "containers.orchestratorClient": "com.microsoft.visualstudio.orchestrators.dockercompose"
+  "containers.orchestratorClient": "com.microsoft.visualstudio.orchestrators.dockercompose",
+  "editor.unicodeHighlight.invisibleCharacters": false,
+  "editor.unicodeHighlight.ambiguousCharacters": false,
+
+  //pylance type checker
+  "python.analysis.typeCheckingMode": "basic",
 }
